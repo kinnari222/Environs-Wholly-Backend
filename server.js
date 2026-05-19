@@ -33,7 +33,7 @@ app.post('/send-email', async (req, res) => {
     const mailOptions = {
         from: `"Environs Website" <${process.env.EMAIL}>`,
         replyTo: email, //reply goes to user's email
-        to: "kinnarikansara18@gmail.com",
+        to: "environs.wholly@gmail.com",
         subject: `New Contact: ${subject || "No Subject"}`,
         html: `
             <h2 style="color: #198754;">New Message from Environs Website</h2>
