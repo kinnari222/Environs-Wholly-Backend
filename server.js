@@ -19,6 +19,10 @@ const transporter = nodemailer.createTransport({
 });
 
 // ─── Contact Form API Route ────────────────────────────────────────────────
+app.get("/", (req, res) => {
+    res.send("Backend is running successfully 🚀");
+});
+
 app.post('/send-email', async (req, res) => {
     const {name, email, phone, subject, message} = req.body;
 
