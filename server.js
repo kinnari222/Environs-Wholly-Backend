@@ -6,7 +6,10 @@ require("dotenv").config();
 const app = express();
 
 // Middleware
-app.use(cors()); // allows frontend to call this API
+app.use(cors({
+    origin: "https://environs-wholly-frontend.onrender.com"
+})); // allows frontend to call this API
+
 app.use(express.json()); // reads JSON data from frontend
 
 // ─── Email Transporter Setup ───────────────────────────────────────────────
